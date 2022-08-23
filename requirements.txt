@@ -3,4 +3,3 @@ Flask-RESTful
 SQLAlchemy
 linkedin-api~=2.0.0a
 pandas
-json
