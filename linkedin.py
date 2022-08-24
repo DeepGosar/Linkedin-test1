@@ -11,7 +11,7 @@ from flask import Flask, jsonify
 from flask_restful import reqparse, abort, Api, Resource, request
 import json
 from sqlalchemy import create_engine
-
+import os
 
 engine = create_engine('sqlite:///C://Users//deep.gosar//Desktop//linkedin-api-master//linked_in_users.db', echo = False) 
 sqlite_connection = engine.connect()
@@ -135,4 +135,5 @@ def create_df(conn_info_rec):
     return test_
 
 api.add_resource(linked, '/linked')
-app.run(port = 5000)
+port = int(os.environ.get('PORT', 5000))
+app.run(port)
