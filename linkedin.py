@@ -15,7 +15,7 @@ import os
 
 engine = create_engine('sqlite:///linked_in_users.db', echo = False) 
 sqlite_connection = engine.connect()
-#engine.execute("CREATE TABLE LinkedIn_Data( `index` INT,`First Name` VARCHAR(100), `Last Name` VARCHAR(100), Country VARCHAR(50), Headline VARCHAR(255), `Industry Type` VARCHAR(100), `Public ID` VARCHAR(100), `Email ID` VARCHAR(255));") 
+engine.execute("CREATE TABLE LinkedIn_Data( `index` INT,`First Name` VARCHAR(100), `Last Name` VARCHAR(100), Country VARCHAR(50), Headline VARCHAR(255), `Industry Type` VARCHAR(100), `Public ID` VARCHAR(100), `Email ID` VARCHAR(255));") 
 
 app = Flask(__name__)
 api = Api(app)
