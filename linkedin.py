@@ -135,5 +135,5 @@ def create_df(conn_info_rec):
     return test_
 
 api.add_resource(linked, '/linked')
-port = int(os.environ.get('PORT', 5000))
-app.run(port)
+#port = int(os.environ.get('PORT', 5000))
+app.run()
