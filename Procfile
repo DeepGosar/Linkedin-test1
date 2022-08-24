@@ -1,1 +1,1 @@
-web: gunicorn linkedin:app
+web: uwsgi uwsgi.ini
